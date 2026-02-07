@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yearbook 2026 | Beyond The Engine</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --blue: #1e3799; 
+            --brown: #784421; 
+            --dark: #0a0a0a; 
+            --gray: #1a1a1a; 
+            --white: #e0e0e0; 
+        }
+
+        /* FIX BUG GESER KANAN */
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background: var(--dark);
+        }
+
+        * { 
+            box-sizing: border-box; 
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            color: var(--white); 
+        }
+
+        /* NAVIGASI RESPONSIF */
+        nav { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 15px 20px; 
+            width: 100%; 
+            background: rgba(10, 10, 10, 0.95); 
+            border-bottom: 2px solid var(--brown);
+            position: fixed; 
+            top: 0; 
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo { 
+            font-family: 'Bebas Neue', cursive; 
+            font-size: 1.8rem; 
+            letter-spacing: 2px; 
+            color: var(--blue);
+            margin: 0;
+        }
+
+        .logo span { color: var(--brown); }
+
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+            gap: 15px; 
+            padding: 0; 
+            margin: 10px 0 0 0;
+        }
+
+        nav ul li a { 
+            text-decoration: none; 
+            color: var(--white); 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--blue); }
+
+        /* HERO SECTION */
+        .hero { 
+            width: 100%;
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)), 
+                        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1200'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 { 
+            font-family: 'Bebas Neue', cursive; 
+            font-size: clamp(3.5rem, 15vw, 7rem); 
+            line-height: 0.9; 
+            color: var(--white); 
+            text-shadow: 4px 4px 0px var(--blue);
+            margin: 0 0 15px 0;
+        }
+
+        .hero h1 span { color: var(--white); }
+
+        .hero p { 
+            max-width: 500px; 
+            font-size: 0.9rem; 
+            margin-bottom: 35px; 
+            opacity: 0.8; 
+            border-left: 3px solid var(--brown); 
+            padding-left: 15px;
+            line-height: 1.5;
+        }
+
+        .btn-mechanic { 
+            padding: 14px 35px; 
+            background: var(--blue); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            border-bottom: 4px solid var(--brown); 
+            transition: 0.3s; 
+            font-family: 'Bebas Neue', cursive; 
+            font-size: 1.4rem; 
+            letter-spacing: 1px; 
+        }
+
+        .btn-mechanic:hover { 
+            transform: translateY(-3px); 
+            background: var(--brown); 
+            border-bottom-color: var(--blue); 
+        }
+
+        /* DESKTOP OPTIMIZATION */
+        @media (min-width: 768px) {
+            nav { 
+                flex-direction: row; 
+                justify-content: space-between; 
+                padding: 20px 8%; 
+            }
+            nav ul { margin: 0; gap: 30px; }
+            nav ul li a { font-size: 0.9rem; }
+            .logo { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; max-width: 650px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BEYOND THE <span>ENGINE</span></div>
+        <ul>
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="galeri.html">KENANGAN</a></li>
+            <li><a href="profil.html">SISWA</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" data-aos="zoom-out" data-aos-duration="1200">
+        <h1 data-aos="fade-up" data-aos-delay="300">DRIVE TO THE<br><span>FUTURE</span></h1>
+        <p data-aos="fade-up" data-aos-delay="500">Mesin boleh berhenti berputar, tapi cerita kita di sekolah akan terus melaju melampaui waktu.</p>
+        <div data-aos="fade-up" data-aos-delay="700">
+            <a href="profil.html" class="btn-mechanic">LIHAT PERJALANAN</a>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html>
